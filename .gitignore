@@ -1,3 +1,7 @@
 node_modules
 
 dist
+
+server/*.html
+
+mornitor-server/sourcemaps

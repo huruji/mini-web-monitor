@@ -1,0 +1,19 @@
+{
+  "name": "monitor-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0",
+    "source-map": "^0.7.3",
+    "url-parse": "^1.4.6"
+  }
+}
