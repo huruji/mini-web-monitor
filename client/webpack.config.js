@@ -1,8 +1,9 @@
-const FileManagerPlugin = require ('filemanager-webpack-plugin');
+const FileManagerPlugin = require ('filemanager-webpack-plugin')
 const path = require('path')
 const webpack = require('webpack')
-const UglifyJsPlugin = require ('uglifyjs-webpack-plugin');
+const UglifyJsPlugin = require ('uglifyjs-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CrossoriginWebpackPlugin = require('crossorigin-webpack-plugin')
 
 module.exports = {
     entry: path.join(__dirname, 'src/index.js'),
@@ -23,16 +24,17 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
         template: path.resolve(__dirname, './src/index.html')
-      }),
-      new webpack.SourceMapDevToolPlugin ({
-        publicPath: 'http://localhost:8002/',
-        filename: '[file].map',
-      }),
-      new FileManagerPlugin ({
-        onStart: [{
-          delete: ['./dist'],
-        }],
-        onEnd: [{
+    }),
+    new CrossoriginWebpackPlugin (),
+    new webpack.SourceMapDevToolPlugin ({
+      publicPath: 'http://localhost:8002/',
+      filename: '[file].map',
+    }),
+    new FileManagerPlugin ({
+      onStart: [{
+        delete: ['./dist'],
+      }],
+      onEnd: [{
           copy: [
             { source: './dist/*.js', destination: path.resolve(__dirname, '../cdn-server') },
             { source: './dist/*.map', destination: path.resolve(__dirname, '../monitor-server/sourcemaps/dist') },

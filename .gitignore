@@ -4,4 +4,6 @@ dist
 
 server/*.html
 
+cdn-server/index.*.js
+
 mornitor-server/sourcemaps
