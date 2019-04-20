@@ -1,7 +1,13 @@
 # 一个旨在讲清楚如何在不暴露源码的情况下定位前端脚本错误的最小版前端监控系统
+
+你可以在我的博客看到详细的开发过程： [https://github.com/huruji/blog/issues/63](https://github.com/huruji/blog/issues/63)
+
+
 <p align="center">
 <img width="60%" src="./demo.png" alt="demo">
 </p>
+
+
 ## 使用
 
 模拟部署
